@@ -1,4 +1,5 @@
-.container{
+
+.container1{
         background-image: url(images/online3.jpg);
         background-repeat: no-repeat;
         background-size:cover ;
@@ -14,21 +15,21 @@ header{
 
 }
 
-.form{
+.feed-form{
 display:flex;
 flex-direction: column;
 align-items: center;
-background-color: rgba(255, 255, 255, 0.565);
+background-color: rgb(255, 255, 255);
 height:350px;
 width:300px;
 margin:50px ;
 border-radius: 5px ;
 }
 
-.form input{
+.feed-form .feedinput{
    margin: 10px;
    padding: 10px 37px;
-   border:none;
+   border-bottom: 2px solid;
    border-radius: 5px ;
    -webkit-border-radius: 5px ;
    -moz-border-radius: 5px ;
@@ -62,4 +63,5 @@ textarea{
     -o-border-radius: 5px ;
 }
 
-s
+
+

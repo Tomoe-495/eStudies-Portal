@@ -140,7 +140,11 @@ h1, h2, h3, h4, h5, h6, p{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
+
+       /* contact us form end */
+
 .main-pop{
     height: 100%;
     width: 100%;
