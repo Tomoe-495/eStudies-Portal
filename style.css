@@ -260,6 +260,9 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: 25px;
     color: white;
 }
+.logo img{
+    height: 60px;
+}
 .navs{
     display: flex;
     gap: 20px;
