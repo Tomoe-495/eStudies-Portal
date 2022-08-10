@@ -30,7 +30,15 @@ h1, h2, h3, h4, h5, h6, p{
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.sub-pop div{
+    display:flex;
+    justify-content: flex-start;
+ }
 .p-img{
-    width: 75%;
+    height :50%;
 }
