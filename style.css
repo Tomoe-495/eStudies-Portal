@@ -5,22 +5,21 @@ body{
     margin: 0;
     font-family: Poppins;
 }
-
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
 .main-pop{
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .2);
     position: fixed;
     left: 0;
     top: 0;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     display:flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    z-index: 5;
 }
 .sub-pop{
     padding: 20px 50px;
@@ -62,7 +61,6 @@ h1, h2, h3, h4, h5, h6, p{
     filter: drop-shadow(rgba(0, 0, 0, .2) 5px 5px 10px);
     -webkit-filter: drop-shadow(rgba(0, 0, 0, .2) 5px 5px 10px);
 }
-
 .first-inp{
     margin-top: 5px;
     width: 70%;
@@ -84,6 +82,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .pop-btn{
+    position: relative;
     border: none;
     padding: 10px 50px;
     margin-top: 15px;
@@ -94,13 +93,13 @@ h1, h2, h3, h4, h5, h6, p{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    cursor: pointer;
     text-transform: uppercase;
-}
+} 
 .pop-btn:focus{
     outline: none;
     border: rgb(0, 0, 0, .2) 1px solid;
 }
-
 .sub-pop div{
     display:flex;
     justify-content: flex-start;
@@ -109,3 +108,53 @@ h1, h2, h3, h4, h5, h6, p{
     height :50%;
 }
 
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo{
+    font-size: 25px;
+    color: white;
+}
+.navs{
+    display: flex;
+    gap: 20px;
+}
+.navs a{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 1200px){
+    .btn-hover::after{
+        content: "";
+        overflow: hidden;
+        position: absolute;
+        left: -111%;
+        top: -30px;
+        width: 30px;
+        height: 100px;
+        background-color: rgba(255, 255, 255, .3);
+        transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg)    ;
+        -moz-transform: rotateZ(-30deg)    ;
+        -ms-transform: rotateZ(-30deg)    ;
+        -o-transform: rotateZ(-30deg)    ;
+        transition: all 250ms;
+        -webkit-transition: all 250ms;
+        -moz-transition: all 250ms;
+        -ms-transition: all 250ms;
+        -o-transition: all 250ms;
+    }
+    .btn-hover:hover::after{
+        left: 111%;
+    }
+}
