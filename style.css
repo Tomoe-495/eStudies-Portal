@@ -3,7 +3,20 @@
 
 * { margin: 0;  padding: 0; box-sizing: border-box;}
 
-.bg-img { overflow :hidden; height: 120vh; background-size: cover;background-position: center;}
+.bg-img { 
+    overflow :hidden; 
+    height: 100vh; 
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: overlay;
+    background-image: url(Images/online3.jpg);
+    
+}
+
+.textarea1{ 
+
+    resize: none;
+}
 
 .content {
     position: absolute;
@@ -42,12 +55,7 @@
 
 .pass:hover a { text-decoration: underline;}
 
-input[type="submit"] {
-    background: linear-gradient(to right, #0000ff 0%, #6666ff 100%);
-    border: 1px solid linear-gradient(to right, #0000ff 0%, #6666ff 100%);color: #fff;
-    font-size: 18px;letter-spacing: 1px;font-weight: 600; cursor: pointer;font-family: 'Montserrat', sans-serif;}
 
-input[type="submit"]:hover { background: linear-gradient(to left, #0000ff 0%, #6666ff 100%);}
 
 .login {  color: #fff; margin: 20px 0;font-family: 'Poppins', sans-serif;}
 
@@ -167,4 +175,18 @@ h1, h2, h3, h4, h5, h6, p{
 .pop-btn:focus{
     outline: none;
     border: rgb(0, 0, 0, .2) 1px solid;
+}
+
+.sub-pop div{
+    display:flex;
+    justify-content: flex-start;
+}
+.p-img{
+    height :50%;
+}
+
+.name,.email{
+    width: 40px;
+    height:45px;
+    overflow-x:hidden;
 }
