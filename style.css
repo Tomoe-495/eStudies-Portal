@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap');
 
 * { margin: 0;  padding: 0; box-sizing: border-box;}
@@ -69,3 +70,49 @@ input[type="submit"]:hover { background: linear-gradient(to left, #0000ff 0%, #6
  .as{ 
     align-items:left
  }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    font-family: Poppins;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+.main-pop{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(2px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sub-pop{
+    height: 80%;
+    width: 80%;
+    background-color:white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-pop div{
+    display:flex;
+    justify-content: flex-start;
+ }
+.p-img{
+    height :50%;
+}
+
