@@ -8,3 +8,31 @@ body{
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
+.main-pop{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(2px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sub-pop{
+    height: 80%;
+    width: 80%;
+    background-color:white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.p-img{
+    height :75%;
+    width :75%;
+    
+}
