@@ -1,8 +1,9 @@
 
 .container1{
         background-image: url(images/feedback-bg.jpg);
-        background-repeat: no-repeat;
-        background-size:cover ;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .3);
+        background-blend-mode: overlay;
         height:100vh;
         width: 100vw;
         
@@ -10,19 +11,19 @@
 header{
    padding:80px 0 30px 0;
    text-align: center;
-   color: #f5813e
-   
-
+   color: #f5813e;
+   font-size: 25px;
 }
 
 .feed-form{
-display:flex;
-flex-direction: column;
-align-items: center;
-background-color: rgb(255, 255, 255);
-width:30%;
-margin:50px ;
-padding: 30px 30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    width:30%;
+    margin:50px;
+    padding: 30px 30px;
 }
 
 .feed-form .feedinput{
@@ -32,10 +33,9 @@ padding: 30px 30px;
    border: none;
    border-bottom: 2px solid #284B63;    
    resize: none;
- 
 }
 .form-head{
-    width:80%;
+    width: 100%;
     margin-bottom: 15px;
 }
 
@@ -45,6 +45,11 @@ padding: 30px 30px;
     font-weight: 700;
     border:none;
     margin: 20px;
-    padding: 8px 108px;
-   
+    padding: 10px 30%;
+    font-size: 13px;
+}
+
+.submit-button:focus{
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .5)
 }
