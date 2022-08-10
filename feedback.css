@@ -1,6 +1,6 @@
 
 .container1{
-        background-image: url(images/online3.jpg);
+        background-image: url(images/feedback-bg.jpg);
         background-repeat: no-repeat;
         background-size:cover ;
         height:100vh;
@@ -20,27 +20,24 @@ display:flex;
 flex-direction: column;
 align-items: center;
 background-color: rgb(255, 255, 255);
-height:350px;
-width:300px;
+width:30%;
 margin:50px ;
-
+padding: 30px 30px;
 }
 
 .feed-form .feedinput{
+    width: 80%;
    margin: 10px;
-   padding: 10px 37px;
+   padding: 10px 20px;
    border: none;
    border-bottom: 2px solid #284B63;    
    
+   resize: none;
  
 }
-
-textarea{
-    margin: 10px;
-    padding: 10px;
-    border:none;
-    resize: none;
-    border-bottom: 2px solid #284B63;
+.form-head{
+    width:80%;
+    margin-bottom: 15px;
 }
 
 .submit-button{
