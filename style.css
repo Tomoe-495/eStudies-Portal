@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: 16px;
     margin: 10px 0;
     pointer-events: none;
-    transition: 0.5s;
+    transition: all 0.5s ease-in;
     color:#666;
 }
 .contactForm .inputBox input:focus ~ span,.contactForm .inputBox input:valid ~ span,.contactForm .inputBox textarea:focus ~ span,.contactForm .inputBox textarea:valid ~ span{
