@@ -276,22 +276,23 @@ h1, h2, h3, h4, h5, h6, p{
 
 @media screen and (min-width: 1200px){
     .btn-hover{
-        overflow: hidden;
         position: relative;
+        overflow: hidden;
+        cursor: pointer;
     }
     .btn-hover::after{
         content: "";
         position: absolute;
-        left: -111%;
+        left: -50px;
         top: -30px;
         width: 30px;
         height: 100px;
         background-color: rgba(255, 255, 255, .3);
         transform: rotateZ(-30deg);
-        -webkit-transform: rotateZ(-30deg)    ;
-        -moz-transform: rotateZ(-30deg)    ;
-        -ms-transform: rotateZ(-30deg)    ;
-        -o-transform: rotateZ(-30deg)    ;
+        -webkit-transform: rotateZ(-30deg);
+        -moz-transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        -o-transform: rotateZ(-30deg);
         transition: all 250ms;
         -webkit-transition: all 250ms;
         -moz-transition: all 250ms;
@@ -302,4 +303,3 @@ h1, h2, h3, h4, h5, h6, p{
         left: 111%;
     }
 }
-
