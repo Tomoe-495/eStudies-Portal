@@ -276,11 +276,11 @@ h1, h2, h3, h4, h5, h6, p{
 
 @media screen and (min-width: 1200px){
     .btn-hover{
+        overflow: hidden;
         position: relative;
     }
     .btn-hover::after{
         content: "";
-        overflow: hidden;
         position: absolute;
         left: -111%;
         top: -30px;
