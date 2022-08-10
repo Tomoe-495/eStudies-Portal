@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6, p{
     z-index: 4;
 }
 
-.navs .active::after{
+.active::after{
     content: "";
     position: absolute;
     left: 0;
@@ -307,51 +307,10 @@ h1, h2, h3, h4, h5, h6, p{
     font-size: 18px;
 }
 
-.landing{
-    height: 100vh;
-    width: 100%;
-    background-image: url(../images/landing.jpg);
-    background-size: cover;
-    background-position: top right;
-    position: relative;
-}
-
-.land-sect{
-    height: 100%;
-    width: 50%;
-    background-color: rgba(245, 129, 62, .3);
-    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
-    animation: appear 2s ease-in;
-    backdrop-filter: blur(2px);
-}
-@keyframes appear{0%{height: 1px;clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}60%{height: 100%;clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}100%{height:100%;clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);}}
-
-.land-sect2{
-    width: calc(100% - 50px);
-    height: 30%;
-    background-color: rgba(0, 0, 0, .1);
-    position: absolute;
-    bottom: 50%;
-    left: 0;
-    backdrop-filter: grayscale(.7) blur(1px);
-    display: flex;
-    align-items: center;
-    padding: 0 0 0 50px;
-    animation: appear2 1s ease-in;
-}
-.land-sect2 h1{
-    font-size: 50px;
-    color: white;
-}
-.sect-head{
-    font-size: 100px;
-}
-@keyframes appear2{0%{width:1px}100%{width:100%}};
-
 
 @media screen and (min-width: 1200px){
     .navs a:hover{
-        background-color: #2e1404;
+        background-color: #be652d;
     }
     .navs a::after{
         content: "";
@@ -396,3 +355,47 @@ h1, h2, h3, h4, h5, h6, p{
         left: 111%;
     }
 }
+
+.landing{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    background-position: top right;
+    position: relative;
+}
+
+.land-sect{
+    height: 100%;
+    width: 50%;
+    background-color: rgba(245, 129, 62, .3);
+    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+    animation: appear 2s ease-in;
+    backdrop-filter: blur(2px);
+}
+@keyframes appear{0%{height: 1px;clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}60%{height: 100%;clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);}100%{height:100%;clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);}}
+
+.land-sect2{
+    width: calc(100% - 50px);
+    height: 30%;
+    background-color: rgba(0, 0, 0, .1);
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    backdrop-filter: grayscale(.7) blur(1px);
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 50px;
+    animation: appear2 1s ease-in;
+}
+.land-sect2 h1{
+    font-size: 40px;
+    color: white;
+    line-height: 75px;
+    filter: drop-shadow(rgba(0, 0, 0, 1) 7px 7px 10px);
+    font-family: montserrat;
+}
+.sect-head{
+    font-size: 100px;
+}
+@keyframes appear2{0%{width:1px}100%{width:100%}};
