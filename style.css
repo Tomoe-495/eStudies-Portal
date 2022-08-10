@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6, p{
     justify-content: center;
     align-items: center;
     z-index: 5;
+    display: none;
 }
 .sub-pop{
     padding: 20px 50px;
@@ -82,7 +83,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .pop-btn{
-    position: relative;
     border: none;
     padding: 10px 50px;
     margin-top: 15px;
@@ -134,6 +134,9 @@ h1, h2, h3, h4, h5, h6, p{
 
 
 @media screen and (min-width: 1200px){
+    .btn-hover{
+        position: relative;
+    }
     .btn-hover::after{
         content: "";
         overflow: hidden;
