@@ -417,7 +417,7 @@ a.active::before{
 .landing{
     height: 100vh;
     width: 100%;
-    background-image: url(../images/landing.jpg);
+    background-image: url("Images/landing.jpg");
     background-size: cover;
     background-position: top right;
     position: relative;
