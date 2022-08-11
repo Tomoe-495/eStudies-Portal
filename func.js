@@ -30,3 +30,15 @@ const current = new Date();
 const time = current.toLocaleTimeString("en-US");
 
 setInterval(console.log(time), 100);
+
+
+
+
+
+
+
+
+// let name1;
+
+// fetch('./accounts.json').then((Response) => Response.json()).then((name1)='edware');
+// console.log(name1);
