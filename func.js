@@ -36,12 +36,9 @@ setInterval(console.log(time), 100);
 let counts = document.getElementsByClassName('v-counts')[0];
 let vCounts;
 
-fetch('./accounts.json')
-.then((Response) => Response.json())
-.then((name1)='edward');
+//      visits value reset
+//  https://api.countapi.xyz/set/codefoxx.com/26cebc23-af0a-4315-9daa-aba484e10e80?value=0
 
-fetch("./accounts.json")
-.then(response => {
-   return response.json();
-})
-.then(name => console.log(name[0].visits));
+function websiteVisits(response) {
+    counts.textContent = response.value;
+}
