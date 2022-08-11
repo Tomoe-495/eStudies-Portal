@@ -675,6 +675,7 @@ footer{
     padding: 7px;
     font-size: 25px;    
     animation: glow 2s infinite;
+    transition: all 300ms ease;
 }
 @keyframes glow{
     0%, 100%{
@@ -687,7 +688,7 @@ footer{
 
 .site-links{
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 .site-links a{
     color: white;
@@ -714,10 +715,28 @@ footer{
     transform: scaleX(1);
 }
 
+.fb:hover{
+    color: #4267B2;
+}
+.twit:hover{
+    color: #1DA1F2;
+}
+.inst:hover{
+    color: #fb3958;
+}
+.ws:hover{
+    color: #25D366;
+}
+
 .footer-line{
     width: 50%;
     height: 1px;
     background-color: rgba(255, 255, 255, .9);
+}
+
+.copy{
+    color: white;
+    font-weight: 300;
 }
 
 
