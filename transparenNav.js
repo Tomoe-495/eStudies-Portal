@@ -1,4 +1,5 @@
 let nav = document.getElementsByClassName('nav')[0];
+nav.style.backgroundColor = "rgba(53, 53, 53, .3)";
 
 //      scroll event listener
 window.addEventListener("scroll", () =>{
