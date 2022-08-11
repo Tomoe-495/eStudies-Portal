@@ -11,6 +11,11 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
 
+::selection{
+    color: white;
+    background-color: #353535;
+}
+
 /* Contact Us Css */
 
 .contact{
@@ -318,9 +323,17 @@ a.active::before{
     transform: scaleX(0);
     transform-origin: center;
     transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
 }
 .navs a:hover::after{
     transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
 }
 
 .counts{
@@ -617,4 +630,9 @@ font-size: 13px;
 .submit-button:focus{
 outline: none;
 border: 1px solid rgba(0, 0, 0, .5)
+}
+
+footer{
+    height: 90px;
+    width: 100%;
 }
