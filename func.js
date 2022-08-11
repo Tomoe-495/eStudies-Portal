@@ -36,7 +36,6 @@ setInterval(console.log(time), 100);
 
 
 
-
 let counts = document.getElementsByClassName('v-counts')[0];
 let vCounts;
 
@@ -48,7 +47,7 @@ fetch("./accounts.json")
 .then(response => {
    return response.json();
 })
-.then(name => console.log(name[0].name));
+.then(name => console.log(name[0].visits));
 
 // let name1;
 

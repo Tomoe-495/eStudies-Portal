@@ -40,7 +40,7 @@ fetch('./accounts.json').then(function (Response) {
 fetch("./accounts.json").then(function (response) {
   return response.json();
 }).then(function (name) {
-  return console.log(name[0].name);
+  return console.log(name[0].visits);
 }); // let name1;
 // fetch('./accounts.json').then((Response) => Response.json()).then((name1)='edware');
 // console.log(name1);
