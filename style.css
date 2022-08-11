@@ -593,7 +593,7 @@ color: #f5813e;
     color: #FFFFFF;
     font-size: 15px;
     font-weight: 300;
-    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
     margin-top: 5px
 }
 
@@ -616,6 +616,12 @@ padding: 10px 20px;
 border: none;
 border-bottom: 2px solid #284B63;    
 resize: none;
+}
+
+.form-head .inputBox feedinput:focus ~ span,.form-head .inputBox feedinput:valid ~ span,.form-head .inputBox textarea:focus ~ span,.form-head .inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
 }
 .form-head{
 width: 100%;
