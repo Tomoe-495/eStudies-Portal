@@ -15,7 +15,6 @@ function reveal(){
 
 let scrollBtn = document.getElementsByClassName('scroll-up-btn')[0];
 
-
 window.addEventListener("scroll", () =>{
     let scrolled = window.scrollY;
     if(scrolled > 200){
@@ -24,6 +23,10 @@ window.addEventListener("scroll", () =>{
         scrollBtn.classList.remove('active');
     }
 })
+
+scrollBtn.onclick = () =>{
+    window.scrollTo(0, 0)
+}
 
 const current = new Date();
 

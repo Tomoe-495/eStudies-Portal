@@ -24,6 +24,11 @@ window.addEventListener("scroll", function () {
     scrollBtn.classList.remove('active');
   }
 });
+
+scrollBtn.onclick = function () {
+  window.scrollTo(0, 0);
+};
+
 var current = new Date();
 var time = current.toLocaleTimeString("en-US");
 setInterval(console.log(time), 100);
