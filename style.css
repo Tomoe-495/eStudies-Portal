@@ -591,9 +591,10 @@ color: #f5813e;
 }
 .f-quote{
     color: #FFFFFF;
-    font-size: large;
+    font-size: 15px;
+    font-weight: 300;
     margin-bottom: 50px;
-    margin-top: 15px;
+    margin-top: 5px
 }
 
 .feed-form{
