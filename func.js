@@ -34,7 +34,6 @@ const time = current.toLocaleTimeString("en-US");
 setInterval(console.log(time), 100);
 
 let counts = document.getElementsByClassName('v-counts')[0];
-let vCounts;
 
 //      visits value reset
 //  https://api.countapi.xyz/set/codefoxx.com/26cebc23-af0a-4315-9daa-aba484e10e80?value=0
