@@ -253,6 +253,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .nav{
+    background-color: rgba(53, 53, 35 .1);
     height: 60px;
     position: fixed;
     top: 0;
@@ -263,6 +264,12 @@ h1, h2, h3, h4, h5, h6, p{
     align-items: center;
     padding: 0 20px;
     z-index: 3;
+    backdrop-filter: blur(3px);
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
 }
 
 .logo, .logo a{
