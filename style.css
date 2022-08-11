@@ -14,10 +14,9 @@ h1, h2, h3, h4, h5, h6, p{
 /* Contact Us Css */
 
 .contact{
-    margin-top: 30px;
     position: relative;
     min-height: calc(100vh - 30px);
-    padding: 0 100px;
+    padding: 30px 100px 0 100px;
     display: flex;
     justify-content: center;
     align-items: center;
