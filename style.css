@@ -117,10 +117,6 @@ h1, h2, h3, h4, h5, h6, p{
     pointer-events: none;
     transition: all 300ms ease-out;
     color:#666;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
 }
 .contactForm .inputBox input:focus ~ span,.contactForm .inputBox input:valid ~ span,.contactForm .inputBox textarea:focus ~ span,.contactForm .inputBox textarea:valid ~ span{
     color: #e91e63;
@@ -328,10 +324,6 @@ a.active::before{
     -moz-transition: all 400ms ease;
     -ms-transition: all 400ms ease;
     -o-transition: all 400ms ease;
-    -webkit-transform:;
-    -moz-transform:;
-    -ms-transform:;
-    -o-transform:;
 }
 .navs a:hover::after{
     transform: scaleX(1);
