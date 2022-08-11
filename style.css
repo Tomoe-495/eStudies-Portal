@@ -669,6 +669,26 @@ border: 1px solid rgba(0, 0, 0, .5)
      
 }
 
+/* helpline */
+.helpline{
+    background-color: #fff;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 170px;
+    right: 0;
+    filter: drop-shadow();
+    text-align: center;
+    margin-left: 1px;
+    
+}
+.help-head{
+    background-color:#025d9a ;
+    font-weight: 600;
+}
+/* helpline end */
+
 footer{
     width: 100%;
     display: flex;
