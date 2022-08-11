@@ -603,7 +603,7 @@ flex-direction: column;
 align-items: center;
 justify-content: flex-start;
 background-color: rgb(255, 255, 255);
-width: 25%;
+width: 20%;
 margin-left:50px;
 padding: 30px 30px;
 
@@ -634,8 +634,9 @@ color:white;
 font-weight: 700;
 border:none;
 margin: 20px;
-padding: 10px 46%;
+padding: 10px 45%;
 font-size: 13px;
+margin-left: -2px;
 }
 
 .submit-button:focus{
