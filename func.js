@@ -45,8 +45,3 @@ fetch("./accounts.json")
    return response.json();
 })
 .then(name => console.log(name[0].visits));
-
-// let name1;
-
-// fetch('./accounts.json').then((Response) => Response.json()).then((name1)='edware');
-// console.log(name1);
