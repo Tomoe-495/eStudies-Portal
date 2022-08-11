@@ -513,13 +513,13 @@ a.active::before{
     -webkit-filter: drop-shadow(rgba(0, 0, 0, .3) 5px 5px 10px);
 }
 .a-s1{
-    background-image: url(images/about-sect1.jpg);
+    background-image: url("Images/about-sect1.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .a-s4{
-    background-image: url(images/about-sect2.jpg);
+    background-image: url("Images/about-sect2.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -576,7 +576,7 @@ a.active::before{
 
 
 .container1{
-    background-image: url(images/feedback-bg.jpg);
+    background-image: url("Images/feedback-bg.jpg");
     background-size: cover;
     background-color: rgba(0, 0, 0, .3);
     background-blend-mode: overlay;
