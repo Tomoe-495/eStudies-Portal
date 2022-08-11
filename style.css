@@ -661,65 +661,70 @@ border: 1px solid rgba(0, 0, 0, .5)
 }
 
 footer{
-    height: 120px;
-    width: calc(100% - 60px);
-    padding: 20px 30px 0 30px;
-    clip-path: polygon(0% 20px, 100% 0%, 100% 100%, 0% 100%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 0 20px 0;
 } 
 
-
-.footer{
-    padding: 20px 0;
-    background-color:#353535;
+.social-icons{
+    display: flex;
+    gap: 5px;
 }
-.footer .social{
-    text-align: center;
-    padding-bottom: 25px;
-    color: #f5813e;
-}
-.footer .social a{
-    font-size: 24px;
-    color: #f5813e;
-    border: 1px solid #FFFFFF;
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    display: inline-block;
-    text-align: center;
+.social-icons ion-icon{
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .5);
     border-radius: 50%;
-    margin: 0 8px;
-    opacity: 0.75;
+    padding: 7px;
+    font-size: 25px;    
+    animation: glow 2s infinite;
 }
-.footer .social a:hover{
-    opacity: 0.9;
+@keyframes glow{
+    0%, 100%{
+        filter: drop-shadow(rgba(255, 255, 255, 0) 0 0 10px);
+    }
+    50%{
+        filter: drop-shadow(rgba(255, 255, 255, .3) 0 0 10px);
+    }
 }
-.footer ul{
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-.footer ul li a{
-color: #f5813e;
-text-decoration: none;
-opacity: 0.8;
-}
-.footer ul li{
-    display: inline-block;
-    padding: 0 15px;
-}
-.footer ul li a:hover{
-    opacity: 1;
-}
-.footer .copyright{
-    margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: #FFFFFF;
-} 
 
+.site-links{
+    display: flex;
+    gap: 10px;
+}
+.site-links a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: all 250ms ease;
+}
+.site-links a:hover{
+    letter-spacing: 1px;
+}
+.site-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: all 250ms ease;
+}
+.site-links a:hover::after{
+    transform: scaleX(1);
+}
+
+.footer-line{
+    width: 50%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .9);
+}
 
 
 .scroll-up-btn{
