@@ -1,4 +1,3 @@
-
 function reveal(){
     let reveal = document.querySelectorAll('.reveal');
 
@@ -33,8 +32,6 @@ const current = new Date();
 const time = current.toLocaleTimeString("en-US");
 
 setInterval(console.log(time), 100);
-
-
 
 let counts = document.getElementsByClassName('v-counts')[0];
 let vCounts;
