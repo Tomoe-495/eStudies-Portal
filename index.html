@@ -10,7 +10,7 @@
     <link rel="icon" href="images\logo's thing.png">
     <script async src="https://api.countapi.xyz/hit/codefoxx.com/26cebc23-af0a-4315-9daa-aba484e10e80?callback=websiteVisits"></script>
 </head>
-<body  onload="initClock()">
+<body>
 
     <div class="main-pop">
         <div class="sub-pop">
@@ -142,7 +142,7 @@
 
     <ion-icon class="scroll-up-btn" name="arrow-up-outline"></ion-icon>
 
-    <div class="datetime">
+    <!-- <div class="datetime">
         <div class="date">
             <span class="dayname">Day</span>
             <span class="month">Month</span>
@@ -156,49 +156,117 @@
             <span class="seconds">00</span>
             <span class="period">AM</span>
         </div>
+    </div> -->
+
+    <div class="datetime">
+        <span class="hms"></span>
+        <span class="ampm"></span>
+        <br>
+        <span class="date"></span>
+
+
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="func.js"></script>
     <script src="transparenNav.js"></script>
-
+     
     <script>
-        function updateClock(){
-          let now = new Date();
-          let dname = now.getDay(),
-              mo = now.getMonth(),
-              dnum = now.getDate(),
-              yr = now.getFullYear(),
-              hou = now.getHour(),
-              sec = now.getSeconds(),
-              pe = "AM" ;
+        //clock
+        function updateTime(){
+            var dateInfo = new Date();
+            var hr,
+            _min = (dateInfo.getMinutes()< 10) ? "0" + dateInfo.getMinutes():dateInfo.getMinutes(),
+            sec = (dateInfo.getSeconds()< 10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+            ampm = (dateInfo.getHours() >=12) ? "AM" : "PM";
+
+            if(dateInfo.getHours() == 0){
+                hr =12;
+            }else if (dateInfo.getHours() > 12){
+                hr = dateInfo.getHours() - 12;
+            }else{
+                hr = dateInfo.getHours();
+            }
+            var currentTime = hr + ":" + _min + ":" + sec;
+
+            document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+            document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+
+            var dow = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Saturday",
+            ],
+            month = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ],
+            day = dateInfo.getDate();
+
+            var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + "" + day;
+            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+
+        };
+         updateTime();
+         setInterval(function(){
+            updateTime()
+         },1000);
+
+        // function updateClock(){
+        //   let now = new Date();
+        //   let dname = now.getDay(),
+        //       mo = now.getMonth(),
+        //       dnum = now.getDate(),
+        //       yr = now.getFullYear(),
+        //       hou = now.getHours(),
+        //       min = now.getMinutes(),
+        //       sec = now.getSeconds(),
+        //       pe = "AM" ;
   
-              if(hou == 0){
-                hou = 12;
-              }
-              if(hou > 12){
-                hou = hou - 12;
-                pe = "PM";
-              }
-              Number.prototype.pad = function(digits){
-                for(let n = this.toString(); n.length < digits; n = 0 + n);
-                return n;
-              }
+        //       if(hou == 0){
+        //         hou = 12;
+        //       }
+        //       if(hou > 12){
+        //         hou = hou - 12;
+        //         pe = "PM";
+        //       }
+              
+        //       Number.prototype.pad = function(digits){
+        //         for(let n = this.toString(); n.length < digits; n = 0 + n);
+        //         return n;
+        //       }
   
-              let months = ["January" , "February ","March","April", "May","June","July","August","September","October","November","December"];
-              let week = ["Monday","Tuesday","Wednesday","Thurday","Friday","Saturday"];
-              let ids = ["dayname","month","daynum","year","hour","minutes","seconds","period"];
-              let values = [week[dname], month[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
-              for(let i = 0; i < ids.length; i++)
-              document.getElementById(ids[i]).firstChild.nodeValue = values[i];
-        }
+        //       let months = ["January" , "February ","March","April", "May","June","July","August","September","October","November","December"];
+        //       let week = ["Monday","Tuesday","Wednesday","Thurday","Friday","Saturday"];
+        //       let ids = ["dayname","month","daynum","year","hour","minutes","seconds","period"];
+        //       let values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+        //       for(let i = 0; i < ids.length; i++)
+        //       document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        //   }
   
-        function initClock(){
-          updateClock();
-          window.setInterval("updateClock()",)
-        }
+        //   function initClock(){
+        //     updateClock();
+        //       window.setInterval("updateClock()", 1);
+        //   }
+        //   clock end
+
+
       </script>
+
 
 
 </body>
