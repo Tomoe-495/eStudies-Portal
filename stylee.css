@@ -18,9 +18,14 @@
 .result{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 400px));
+    grid-gap: 20px;
 }
 .logs{
     display: flex;
     gap: 15px;
     padding: 5px 20px;
+    border-radius: 10px 0 10px 0;
+    filter: drop-shadow(rgba(0, 0, 0, .1) 5px 5px 10px);
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
