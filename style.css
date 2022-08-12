@@ -877,6 +877,17 @@ footer{
     padding: 0 25px;
 }
 
+.revision-table{
+grid-template-columns: repeat(5, auto);
+}
+.study-table{
+    grid-template-columns: repeat(3, auto);
+}
+
+.pro-table div p:nth-child(1){
+    font-weight: 600;
+}
+
 
 @media (max-width: 991px){
     .contact{
