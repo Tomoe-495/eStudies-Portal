@@ -20,10 +20,10 @@
 
         <div class="navs">
             <a href="index.html">Home</a>
-            <a href="marks.html">Marks</a>
+            <a href="marksheet.html">Marks</a>
             <a href="" class="active">Progress</a>
-            <a href="#">Study Resources</a>
-            <a href="#">Revision Classes</a>
+            <a href="study_resources.html">Study Resources</a>
+            <a href="revision.html">Revision Classes</a>
             <a href="feedback.html">FeedBack</a>
             <a href="contact.html">Contacts</a>
         </div>
@@ -202,6 +202,15 @@
     </div>
     
 
+        <!-- clock and date -->
+
+        <div class="datetime"> 
+            <span class="hms"></span>
+            <span class="ampm"></span>
+            <br>
+            <span class="date"></span>
+    </div>
+        <!-- clock and date end -->
 
     <footer class="bg-theme1">
 
@@ -223,10 +232,75 @@
         <div class="copy">eStudiez &copy; 2022</div>
         
     </footer>
+    <!-- helpline -->
+    <div class="helpline">
+        <h2 class="help-head">Helpline</h2>
+        <p>+92 3213902064</p>
+        <p>+92 3168658168</p>
+        <p>aptech@gmail.com</p>
+    </div>
+    <!-- helpline end -->
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="func.js"></script>
+    <script>
+    
+        //clock
+        function updateTime(){
+           var dateInfo = new Date();
+           var hr,
+           _min = (dateInfo.getMinutes()< 10) ? "0" + dateInfo.getMinutes():dateInfo.getMinutes(),
+           sec = (dateInfo.getSeconds()< 10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+           ampm = (dateInfo.getHours() >=12) ? "PM" : "AM";
+
+           if(dateInfo.getHours() == 0){
+               hr =12;
+           }else if (dateInfo.getHours() > 12){
+               hr = dateInfo.getHours() - 12;
+           }else{
+               hr = dateInfo.getHours();
+           }
+           var currentTime = hr + ":" + _min + ":" + sec;
+
+           document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+           document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+
+           var dow = [
+               "Sunday",
+               "Monday",
+               "Tuesday",
+               "Wednesday",
+               "Thursday",
+               "Saturday",
+           ],
+           month = [
+               "January",
+               "February",
+               "March",
+               "April",
+               "May",
+               "June",
+               "July",
+               "August",
+               "September",
+               "October",
+               "November",
+               "December",
+           ],
+           day = dateInfo.getDate();
+
+           var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day;
+           document.getElementsByClassName("date")[0].innerHTML = currentDate;
+       };
+        updateTime();
+        setInterval(function(){
+           updateTime()
+        },1000);
+
+      
+       //   clock end
+ </script>
     
 </body>
 </html>

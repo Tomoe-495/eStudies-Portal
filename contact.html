@@ -23,12 +23,12 @@
 
         <div class="navs">
             <a href="index.html">Home</a>
-            <a href="#">Marks</a>
-            <a href="#">Progress</a>
-            <a href="#">Study Resources</a>
-            <a href="#">Revision Classes</a>
+            <a href="marksheet.html">Marks</a>
+            <a href="progress.html">Progress</a>
+            <a href="study_resources.html">Study Resources</a>
+            <a href="revision.html">Revision Classes</a>
             <a href="feedback.html">FeedBack</a>
-            <a href="contact.html" class="active">Contacts</a>
+            <a href="" class="active">Contacts</a>
         </div>
 
         <div class="counts">
@@ -157,65 +157,63 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="func.js"></script>
-
     <script>
+    
         //clock
         function updateTime(){
-            var dateInfo = new Date();
-            var hr,
-            _min = (dateInfo.getMinutes()< 10) ? "0" + dateInfo.getMinutes():dateInfo.getMinutes(),
-            sec = (dateInfo.getSeconds()< 10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
-            ampm = (dateInfo.getHours() >=12) ? "PM" : "AM";
+           var dateInfo = new Date();
+           var hr,
+           _min = (dateInfo.getMinutes()< 10) ? "0" + dateInfo.getMinutes():dateInfo.getMinutes(),
+           sec = (dateInfo.getSeconds()< 10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+           ampm = (dateInfo.getHours() >=12) ? "PM" : "AM";
 
-            if(dateInfo.getHours() == 0){
-                hr =12;
-            }else if (dateInfo.getHours() > 12){
-                hr = dateInfo.getHours() - 12;
-            }else{
-                hr = dateInfo.getHours();
-            }
-            var currentTime = hr + ":" + _min + ":" + sec;
+           if(dateInfo.getHours() == 0){
+               hr =12;
+           }else if (dateInfo.getHours() > 12){
+               hr = dateInfo.getHours() - 12;
+           }else{
+               hr = dateInfo.getHours();
+           }
+           var currentTime = hr + ":" + _min + ":" + sec;
 
-            document.getElementsByClassName("hms")[0].innerHTML = currentTime;
-            document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+           document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+           document.getElementsByClassName("ampm")[0].innerHTML = ampm;
 
-            var dow = [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Saturday",
-            ],
-            month = [
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December",
-            ],
-            day = dateInfo.getDate();
+           var dow = [
+               "Sunday",
+               "Monday",
+               "Tuesday",
+               "Wednesday",
+               "Thursday",
+               "Saturday",
+           ],
+           month = [
+               "January",
+               "February",
+               "March",
+               "April",
+               "May",
+               "June",
+               "July",
+               "August",
+               "September",
+               "October",
+               "November",
+               "December",
+           ],
+           day = dateInfo.getDate();
 
-            var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day;
-            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+           var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day;
+           document.getElementsByClassName("date")[0].innerHTML = currentDate;
+       };
+        updateTime();
+        setInterval(function(){
+           updateTime()
+        },1000);
 
-        };
-         updateTime();
-         setInterval(function(){
-            updateTime()
-         },1000);
-
-       
-        //   clock end
-
-
-      </script>
+      
+       //   clock end
+ </script>
+   
 </body>
 </html>
