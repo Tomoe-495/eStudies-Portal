@@ -939,10 +939,14 @@ footer{
     grid-template-columns: repeat(auto-fit,minmax(300px, 400px));
     grid-gap: 20px;
     margin-bottom: 40px;
+    
 }
-.c{
+.c {
     border-bottom: 2px solid black;
+    background-color: #4267B2;
+    color: #ffffff;
 }
+
 .logs{
     display: flex;
     gap: 15px;
