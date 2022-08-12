@@ -804,7 +804,7 @@ footer{
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: #fff;
     padding: 10px 15px;
     filter: drop-shadow(rgba(0, 0, 0, .2) -5px -5px 10px);
     border-radius: 5px 0 0 0;
@@ -823,6 +823,47 @@ footer{
     background-color: #fff;
 }
 
+.mark-container{
+    display: flex;
+    justify-content: center;
+}
+.mark-contain{
+    padding: 90px 50px 50px 50px ;
+    width: calc(95% - 100px);
+    filter: drop-shadow(rgba(0,0,0,0.4)0 0 10px);
+    background-color: #ffffff;
+}
+
+.mark-name{
+    font-size: 40px;
+}
+.mark-class{
+    font-size: 25px;
+}
+.result{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 400px));
+    grid-gap: 20px;
+}
+.logs{
+    display: flex;
+    gap: 15px;
+    padding: 5px 20px;
+    border-radius: 10px 0 10px 0;
+    filter: drop-shadow(rgba(0, 0, 0, .1) 5px 5px 10px);
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+.marks-table{
+    border-top: 1px solid rgba(0, 0, 0, .3);
+    margin-top: 50px;
+    display: flex;
+    justify-content:center;
+}
+
+.marks-table tr th, .marks-table tr td{
+    padding: 0 25px;
+}
 
 
 
