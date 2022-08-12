@@ -755,8 +755,8 @@ border: 1px solid rgba(0, 0, 0, .5)
     filter: drop-shadow(rgba(0, 0, 0, .2) 0 0 10px);
 }
 .help-head{
-    background-color:#025d9a ;
-    color: white;
+    background-color:#f5813e ;
+    color: black;
     padding: 5px 10px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1100,12 +1100,12 @@ h1{
         width:30px;
         height: 30px;
         border-radius: 50%;
-        background-color: #025d9a;
+        background-color: #f5813e;
         color:#353535;
         display: flex;
         justify-content: center;
         align-items: center;
-        color:white;
+        color:black;
         cursor: pointer;
         transition: all 300ms ease;
     }
@@ -1135,8 +1135,8 @@ h1{
         color: #353535;
     }
     .helpline.active .help-head{
-        background-color:#025d9a ;
-        color: white;
+        background-color:#f5813e ;
+        color: black;
         padding: 5px 20px;
         font-weight: 600;
         text-transform: uppercase;
