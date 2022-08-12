@@ -878,21 +878,25 @@ footer{
 }
 
 
-
-
-
 @media (max-width: 991px){
     .contact{
-        padding: 50px;
+        padding: 100px 0 0 0;
     }
-    .container{
+    .maincontainer{
         flex-direction: column;
     }
-    .container.contactInfo{
-        margin-bottom: 40px;
+    .contactInfo{
+        flex-direction: column;
+        gap:7px;
     }
-    .container.contactInfo.contactForm{
-        width: 100%;
+    .box, .text{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .md-form{
+        width: 70%;
+        padding-bottom: 30px;
     }
 }
 
