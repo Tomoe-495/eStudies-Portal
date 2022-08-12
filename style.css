@@ -815,3 +815,16 @@ footer{
     filter: drop-shadow(rgba(0, 0, 0, .2) -5px -5px 10px);
     border-radius: 5px 0 0 0;
 }
+
+
+.pro-container{
+    display: flex;
+    justify-content:center;
+}
+
+.pro-contain{
+    padding: 90px 50px 50px 50px;
+    width: calc(95% - 100px);
+    filter: drop-shadow(rgba(0, 0, 0, .4) 0 0 10px);
+    background-color: #fff;
+}
