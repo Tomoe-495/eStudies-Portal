@@ -742,6 +742,9 @@ border: 1px solid rgba(0, 0, 0, .5)
 }
 
 /* helpline */
+.plus{
+    display: none;
+}
 .helpline{
     position: fixed;
     left: 5px;
@@ -1025,6 +1028,7 @@ grid-template-columns: repeat(5, auto);
 /* tablet size */
 @media only screen and (max-width: 768px){
     .helpline{
+        padding: 0;
         overflow: hidden;
         bottom:20px;
         width:30px;
@@ -1032,29 +1036,41 @@ grid-template-columns: repeat(5, auto);
         border-radius: 50%;
         background-color: #025d9a;
         color:#353535;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:white;
+    }
+    .helpline.active .plus{
+        display: none;
+    }
+    .help-head, .helpline p{
+        display: none;
     }
     .helpline.active{
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
         width:auto;
         height:auto;
         background-color: rgba(255, 255, 255, .8);
         text-align: center;
         filter: drop-shadow(rgba(0, 0, 0, .2) 0 0 10px);
     }
-
-    .help-head, .helpline p{
-        display: none;
+    .helpline.active .help-head, .helpline.active p{
+        display: block;
     }
-    .help-head{
+    .helpline.active p{
+        color: #353535;
+    }
+    .helpline.active .help-head{
         background-color:#025d9a ;
         color: white;
-        padding: 5px 10px;
+        padding: 5px 20px;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 15px;
         letter-spacing: 1px;
-    }
-    .helpline p{
-        padding: 5px 10px;
     }
 
     .character {
