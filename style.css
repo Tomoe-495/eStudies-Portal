@@ -826,6 +826,14 @@ footer{
     background-color: #fff;
 }
 
+.pro-table{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    grid-column-gap: 20px;
+    justify-content: center;
+}
+
 .mark-container{
     display: flex;
     justify-content: center;
