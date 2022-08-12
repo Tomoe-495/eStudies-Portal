@@ -1107,7 +1107,7 @@ h1{
         width: 100%;
         text-align: center;
         padding-top: 50px;
-        background-color: rgba(53, 53, 53, .8);
+        background-color: rgba(53, 53, 53, 1);
         height: 100vh;
         z-index: 10;
     }

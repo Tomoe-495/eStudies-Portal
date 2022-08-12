@@ -6,11 +6,11 @@ let pop = document.getElementsByClassName('main-pop')[0];
 let error = document.getElementsByClassName('error')[0];
 let username;
 
-if(username != undefined){
-    pop.style.display = "none";
-}else if(username == undefined){
-    pop.style.display = "flex";
-}
+// if(username != undefined){
+//     pop.style.display = "none";
+// }else if(username == undefined){
+//     pop.style.display = "flex";
+// }
 
 function start(val){
     for(let p of radio){
