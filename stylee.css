@@ -22,7 +22,7 @@
 }
 .logs{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     padding: 5px 20px;
     border-radius: 10px 0 10px 0;
     filter: drop-shadow(rgba(0, 0, 0, .1) 5px 5px 10px);
