@@ -14,8 +14,6 @@ function start(val){
     }
 }
 
-let notneeded = "1234567890!@#$%^&*()`~,./?><:;'{}[]";
-
 inp.onkeyup = ()=>{
     if(inp.value.length < 5){
         inbtn.style.display = "none";
@@ -37,7 +35,27 @@ inbtn.onclick = () => {
     pop.style.display = "none";
 }
 
-setInterval(UserName.innerHTML, 1000);
+setInterval( ()=>{
+    if(! UserName == undefined){
+        UserName.innerHTML = username;
+    }
+}, 1000);
+
+let ham = document.getElementsByClassName('ham')[0];
+let nav = document.getElementsByClassName('navs')[0];
+let change = false;
+
+ham.onclick = () => {
+    change = ! change;
+    if(change){
+        ham.classList.add('active');
+        nav.classList.remove('active');
+    }else if(! change){
+        ham.classList.remove('active');
+        nav.classList.add('active');
+    }
+}
+
 
 function reveal(){
     let reveal = document.querySelectorAll('.reveal');
@@ -82,3 +100,16 @@ let counts = document.getElementsByClassName('v-counts')[0];
 function websiteVisits(response) {
     counts.textContent = response.value;
 }
+
+
+fetch("accounts.json")
+        .then((response)=>(response.json())
+        .then((data) => {
+            console.log(data);
+            for(let i in data){
+                let a=`${data[i].name}------${data[i].address.city}<br>`;
+                document.write(a);
+            }
+        })
+        .catch((error) => console.log(error)));
+        // .catch((error) => {document.write("Can't Fetch Data")}));
