@@ -158,13 +158,27 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* contact us form end */
 
+
+
 /* study resources */
 
-.t-2 ,tr, th, td{
+.t-2 {
  margin-right: 160px;
 }
 
 /* study resources end */
+
+
+
+/* revision css */
+
+.r-2{
+  
+}
+
+/* revision css end */
+
+
 
 .main-pop{
     height: 100%;
