@@ -56,6 +56,17 @@ ham.onclick = () => {
     }
 }
 
+let help = document.getElementsByClassName('helpline')[0];
+let changer = false;
+
+help.onclick = () =>{
+    changer = ! changer
+    if(changer){
+        help.classList.add('active');
+    }else{
+        help.classList.remove('active');
+    }
+}
 
 function reveal(){
     let reveal = document.querySelectorAll('.reveal');
@@ -103,18 +114,13 @@ function websiteVisits(response) {
 
 
 fetch("accounts.json")
-
-        .then((response)=>(response.json())
-        .then((data) => {
-            console.log(data);
-            for(let i in data){
-                let a=`${data[i].name}------${data[i].address.city}<br>`;
-                document.write(a);
-            }
-        })
-        .catch((error) => console.log(error)));
-        // .catch((error) => {document.write("Can't Fetch Data")}));
-
- 
-
-
+    .then((response)=>(response.json())
+    .then((data) => {
+        console.log(data);
+        for(let i in data){
+            let a=`${data[i].name}------${data[i].address.city}<br>`;
+            document.write(a);
+        }
+    })
+    .catch((error) => console.log(error)));
+    // .catch((error) => {document.write("Can't Fetch Data")}));
