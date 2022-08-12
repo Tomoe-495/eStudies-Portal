@@ -1,0 +1,20 @@
+h1{
+    color: rgb(255, 145, 19);
+    text-align: center;
+}
+
+@media(max-width:600px){
+    .container{}
+}
+
+body{
+    background: url(Images/W4.jpg);
+    background-size: cover;
+}
+
+table{
+    color: #ffffff;
+    opacity: 1.5rem;
+    text-align: center;
+    border: 5px solid #ffffff;
+}
