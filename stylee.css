@@ -1,0 +1,26 @@
+.mark-container{
+    display: flex;
+    justify-content: center;
+}
+.mark-contain{
+    padding: 90px 50px 50px 50px ;
+    width: calc(95% - 100px);
+    filter: drop-shadow(rgba(0,0,0,0.4)0 0 10px);
+    background-color: #ffffff;
+}
+
+.mark-name{
+    font-size: 40px;
+}
+.mark-class{
+    font-size: 25px;
+}
+.result{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 400px));
+}
+.logs{
+    display: flex;
+    gap: 10px;
+    padding: 5px 20px;
+}
