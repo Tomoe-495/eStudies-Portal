@@ -889,14 +889,19 @@ footer{
         flex-direction: column;
         gap:7px;
     }
+    .container{
+        padding: 0;
+        width: auto;
+    }
     .box, .text{
         flex-direction: column;
         align-items: center;
         text-align: center;
+        justify-content: center;
     }
     .md-form{
         width: 70%;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
 }
 
@@ -908,9 +913,13 @@ footer{
 
 /* tablet size */
 @media only screen and (max-width: 768px){
-    .character {display: none;}
-    .feed-form{ width: 50%;
-    margin-right: 45px;}
+    .character {
+        display: none;
+    }
+    .feed-form{
+        width: 50%;
+        margin-right: 45px;
+    }
 
 
 

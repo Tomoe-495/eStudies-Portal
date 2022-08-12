@@ -208,9 +208,8 @@
             ],
             day = dateInfo.getDate();
 
-            var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + "" + day;
+            var currentDate = dow[dateInfo.getDay()] + ", " + month[dateInfo.getMonth()] + " " + day;
             document.getElementsByClassName("date")[0].innerHTML = currentDate;
-
         };
          updateTime();
          setInterval(function(){
