@@ -907,13 +907,15 @@ footer{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, auto);
-    grid-column-gap: 20px;
+    grid-column-gap: 40px;
     justify-content: center;
 }
 
 .mark-container{
     display: flex;
     justify-content: center;
+    
+   
 }
 .mark-contain{
     padding: 90px 50px 50px 50px ;
@@ -928,10 +930,15 @@ footer{
 .mark-class{
     font-size: 25px;
 }
+
 .result{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 400px));
     grid-gap: 20px;
+    margin-bottom: 40px;
+}
+.c{
+    border-bottom: 2px solid black;
 }
 .logs{
     display: flex;
@@ -1017,6 +1024,9 @@ grid-template-columns: repeat(5, auto);
         text-align: center;
     }
 
+}
+.row-cont{
+    text-align: center;
 }
 
 /* tablet size */
