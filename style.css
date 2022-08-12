@@ -158,6 +158,14 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* contact us form end */
 
+/* study resources */
+
+.t-2 ,tr, th, td{
+ margin-right: 160px;
+}
+
+/* study resources end */
+
 .main-pop{
     height: 100%;
     width: 100%;
