@@ -132,16 +132,3 @@ var counts = document.getElementsByClassName('v-counts')[0]; //      visits valu
 function websiteVisits(response) {
   counts.textContent = response.value;
 }
-
-fetch("accounts.json").then(function (response) {
-  return response.json().then(function (data) {
-    console.log(data);
-
-    for (var i in data) {
-      var a = "".concat(data[i].name, "------").concat(data[i].address.city, "<br>");
-      document.write(a);
-    }
-  })["catch"](function (error) {
-    return console.log(error);
-  });
-}); // .catch((error) => {document.write("Can't Fetch Data")}));
