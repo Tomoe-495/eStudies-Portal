@@ -103,6 +103,7 @@ function websiteVisits(response) {
 
 
 fetch("accounts.json")
+
         .then((response)=>(response.json())
         .then((data) => {
             console.log(data);
@@ -115,3 +116,5 @@ fetch("accounts.json")
         // .catch((error) => {document.write("Can't Fetch Data")}));
 
  
+
+

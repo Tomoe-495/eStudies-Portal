@@ -907,13 +907,15 @@ footer{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, auto);
-    grid-column-gap: 20px;
+    grid-column-gap: 40px;
     justify-content: center;
 }
 
 .mark-container{
     display: flex;
     justify-content: center;
+    
+   
 }
 .mark-contain{
     padding: 90px 50px 50px 50px ;
@@ -928,10 +930,15 @@ footer{
 .mark-class{
     font-size: 25px;
 }
+
 .result{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 400px));
     grid-gap: 20px;
+    margin-bottom: 40px;
+}
+.c{
+    border-bottom: 2px solid black;
 }
 .logs{
     display: flex;
@@ -996,7 +1003,7 @@ grid-template-columns: repeat(5, auto);
 /* mobile size */
 @media only screen and (max-width: 650px){
     .land-sect{
-        width: 100%;
+        width: auto;
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
     .land-sect2{
@@ -1017,10 +1024,49 @@ grid-template-columns: repeat(5, auto);
         text-align: center;
     }
 
+    .datetime{
+        position: relative;
+    }
+}
+.row-cont{
+    text-align: center;
 }
 
 /* tablet size */
 @media only screen and (max-width: 768px){
+    .helpline{
+        overflow: hidden;
+        bottom:20px;
+        width:30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #025d9a;
+        color:#353535;
+    }
+    .helpline.active{
+        width:auto;
+        height:auto;
+        background-color: rgba(255, 255, 255, .8);
+        text-align: center;
+        filter: drop-shadow(rgba(0, 0, 0, .2) 0 0 10px);
+    }
+
+    .help-head, .helpline p{
+        display: none;
+    }
+    .help-head{
+        background-color:#025d9a ;
+        color: white;
+        padding: 5px 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+    .helpline p{
+        padding: 5px 10px;
+    }
+
     .character {
         display: none;
     }
@@ -1061,7 +1107,7 @@ grid-template-columns: repeat(5, auto);
         z-index: 10;
     }
     .navs.active{
-        right: 100%;
+        right: -100%;
     }
 
     .counts{
