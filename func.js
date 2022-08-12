@@ -103,13 +103,14 @@ function websiteVisits(response) {
 
 
 fetch("accounts.json")
-        .then((response)=>(response.json())
-        .then((data) => {
-            console.log(data);
-            for(let i in data){
-                let a=`${data[i].name}------${data[i].address.city}<br>`;
-                document.write(a);
-            }
-        })
-        .catch((error) => console.log(error)));
-        // .catch((error) => {document.write("Can't Fetch Data")}));
+    .then((response)=>(response.json())
+    .then((data) => {
+        console.log(data);
+        for(let i in data){
+            let a=`${data[i].name}------${data[i].address.city}<br>`;
+            document.write(a);
+        }
+    })
+    .catch((error) => console.log(error)));
+    // .catch((error) => {document.write("Can't Fetch Data")}));
+
