@@ -616,7 +616,7 @@ padding: 30px 30px;
 .feed-form .feedinput{
 width: 80%;
 margin: 10px;
-padding: 10px 20px;
+/* padding: 10px 20px; */
 border: none;
 border-bottom: 2px solid #284B63;    
 resize: none;
@@ -638,9 +638,10 @@ resize: none;
     font-weight: 700;
     border:none;
     margin: 20px;
-    padding: 10px 45%;
+    padding: 10px ;
     font-size: 13px;
-    margin-left: -2px;
+    
+    width: 80%;
 }
 
 .submit-button:focus{
@@ -903,6 +904,11 @@ footer{
 
 /* tablet size */
 @media only screen and (max-width: 768px){
+    .character {display: none;}
+    .feed-form{ width: 50%;
+    margin-right: 45px;}
+
+
 
 }
 
