@@ -1054,6 +1054,11 @@ grid-template-columns: repeat(5, auto);
         justify-content: center;
         align-items: center;
         color:white;
+        cursor: pointer;
+        transition: all 300ms ease;
+    }
+    .plus{
+        display: block;
     }
     .helpline.active .plus{
         display: none;
