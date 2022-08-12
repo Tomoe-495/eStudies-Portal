@@ -112,3 +112,40 @@ function websiteVisits(response) {
     counts.textContent = response.value;
 }
 
+let loca = document.getElementsByClassName('location')[0];
+
+if(navigator.geolocation){
+    loca.innerText = "Allow to detect location";
+    navigator.geolocation.getCurrentPosition(onSuccess,onError);
+}else{
+    loca.innerText="Browser Not Support";
+}
+
+function onSuccess(position){
+    loca.innerText = "Detecting Your Location";
+
+// console.log(latitude,longitude);
+let {latitude,longitude}=position.coords;
+fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=d36dbe0a4ff84607822ee391e99aa0c5`)
+    .then(response => response.json()).then(response =>{
+        let allDetails = response.results[0].components;
+        console.table(allDetails);
+        let {neighbourhood, postcode, country} = allDetails;
+        loca.innerText = `${neighbourhood}, ${country}`;
+    }).catch(()=>{
+        loca.innerText = "Something went wrong";
+    });
+
+}
+
+function onError(error){
+  if(error.code == 1){
+    loca.innerText="You Denied the Request";
+  }
+  else if(error.code == 2){
+    loca.innerText="Location Not Available";
+  }else{
+    loca.innerText="Something went Wrong";
+  }
+  loca.setAttribute("disabled","true");
+}
