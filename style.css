@@ -804,7 +804,7 @@ footer{
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: #fff;
+    background-color: rgb(235, 235, 235);
     padding: 10px 15px;
     filter: drop-shadow(rgba(0, 0, 0, .2) -5px -5px 10px);
     border-radius: 5px 0 0 0;
@@ -984,4 +984,25 @@ footer{
         font-size: 13px ;
         
     }
+}
+
+
+/* mobile size */
+@media only screen and (max-width: 600px){
+
+}
+
+/* tablet size */
+@media only screen and (max-width: 768px){
+
+}
+
+/* laptop size */
+@media only screen and (max-width: 992px){
+
+}
+
+/* pc screen size */
+@media only screen and (max-width: 1200px){
+
 }
