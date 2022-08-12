@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6, p{
     justify-content: center;
     align-items: center;
     z-index: 999;
-    display: none;
+    /* display: none; */
 }
 .sub-pop{
     padding: 20px 50px;
@@ -224,6 +224,8 @@ h1, h2, h3, h4, h5, h6, p{
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    display: none;
+    animation: fadein 500ms ease-out
 }
 .first-inp:focus{
     outline: none;
@@ -246,10 +248,32 @@ h1, h2, h3, h4, h5, h6, p{
     -o-border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-} 
+    display: none;
+    animation: fadein 500ms ease-in;
+}
 .pop-btn:focus{
     outline: none;
     border: rgb(0, 0, 0, .2) 1px solid;
+}
+.error{
+    color: red;
+    display: none;
+    animation: shake 500ms;
+}
+@keyframes shake{
+    0%{
+        opacity: .4;
+        transform: translateX(-50px);
+    }40%{
+        opacity: .7;
+        transform: translateX(50px);
+    }70%{
+        opacity: .9;
+        transform: translateX(-30px);
+    }100%{
+        opacity: 1;
+        transform: translateX(0);            
+    }
 }
 .sub-pop div{
     display:flex;
@@ -277,6 +301,17 @@ h1, h2, h3, h4, h5, h6, p{
     -moz-transition: all 300ms linear;
     -ms-transition: all 300ms linear;
     -o-transition: all 300ms linear;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .logo, .logo a{

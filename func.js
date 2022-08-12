@@ -1,3 +1,44 @@
+let inp = document.getElementsByClassName('first-inp')[0];
+let inbtn = document.getElementsByClassName('pop-btn')[0];
+let radio = document.getElementsByClassName('p-radio');
+let UserName = document.getElementsByClassName('u-name')[0];
+let pop = document.getElementsByClassName('main-pop')[0];
+let error = document.getElementsByClassName('error')[0];
+let username;
+
+function start(val){
+    for(let p of radio){
+        if(p.checked){
+            inp.style.display = "block";
+        }
+    }
+}
+
+let notneeded = "1234567890!@#$%^&*()`~,./?><:;'{}[]";
+
+inp.onkeyup = ()=>{
+    if(inp.value.length < 5){
+        inbtn.style.display = "none";
+    }else if(inp.value.length >= 5){
+        inbtn.style.display = "block";
+    }
+}
+
+inbtn.onclick = () => {
+    let username = "Hello, " + inp.value;
+    let j = 0;
+    function textin(){
+        if(j < username.length){
+            UserName.innerHTML += username[j];
+            j++
+        }
+    }
+    setInterval(textin, 100);
+    pop.style.display = "none";
+}
+
+setInterval(UserName.innerHTML, 1000);
+
 function reveal(){
     let reveal = document.querySelectorAll('.reveal');
 

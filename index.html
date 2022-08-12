@@ -18,22 +18,25 @@
               <img src="images/popup.jpg" alt="" class="p-img">
 
             <h3>Select the user category you belong to:</h3>
-            <input type="text" placeholder="Enter your Username" class="first-inp">
         
             <div class="radios">
                 <div class="s-pop">
-                    <input type="radio" name="select">
+                    <input type="radio" name="select" class="p-radio" onclick="start('teacher')">
                     <p>Teacher</p>
                 </div>
                 <div class="s-pop">
-                    <input type="radio" name="select">
+                    <input type="radio" name="select" class="p-radio" onclick="start('student')">
                     <p>Student</p>
                 </div>
                 <div class="s-pop">
-                    <input type="radio" name="select">
+                    <input type="radio" name="select" class="p-radio" onclick="start('parent')">
                     <p>Parent/Guardian</p>
                 </div>
             </div>
+
+            <input type="text" placeholder="Enter your Username" class="first-inp">
+
+            <p class="error">No numbers or special characters</p>
 
             <button class="pop-btn bg-theme4 btn-hover">Submit</button>
         </div>
@@ -60,7 +63,7 @@
                 <ion-icon name="people"></ion-icon>
                 <span class="v-pop">Visitor's count</span>
             </div>
-            <p class="u-name">Mr. Someone</p>
+            <p class="u-name"></p>
         </div>
 
     </header>
@@ -153,8 +156,6 @@
         <span class="date"></span>
 
     <!-- clock and date end -->
-
-
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
