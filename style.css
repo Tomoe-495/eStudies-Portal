@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6, p{
     justify-content: center;
     align-items: center;
     z-index: 999;
-    display: none;
+    /* display: none; */
 }
 .sub-pop{
     padding: 20px 50px;
@@ -612,17 +612,15 @@ a.active::before{
     -o-border-radius: 20px 0 20px 0;
     filter: drop-shadow(rgba(0, 0, 0, .3) 5px 5px 10px);
     -webkit-filter: drop-shadow(rgba(0, 0, 0, .3) 5px 5px 10px);
+    background-size: cover;
+    background-position: center;
 }
 .a-s1{
     background-image: url("Images/about-sect1.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .a-s4{
     background-image: url("Images/about-sect2.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .a-s2, .a-s3{
@@ -643,6 +641,7 @@ a.active::before{
 .icon-circle{
     color: white;
     background-color: #f5813e;
+    color: white;
     width: 25px;
     height: 25px;
     border-radius: 50%;
