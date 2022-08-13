@@ -64,21 +64,22 @@
       </div>
 
       <div class="inputBox">
-        <input type="text" required="required" class="feedinput">
+        <input type="text" required="required" class="feedinput" id="username"onkeyup=nameValidation()>
         <span>Enter your name</span>
       </div>
 
       <div class="inputBox">
-       <input type="Email"  required="required"  class="feedinput">
+       <input type="Email"  required="required"  class="feedinput"  id="email"onkeyup=emailValidation()>
       <span>Enter your Email</span>
       </div>
 
       <div class="inputBox">
-        <textarea cols="30" rows="3" required class="feedinput"></textarea>
+        <textarea cols="30" rows="3" required class="feedinput"  onkeyup=messageValidation()></textarea>
         <span>Enter your Message</span>
       </div>
     
-      <button class="submit-button btn-hover">Send</button>
+      <button class="submit-button btn-hover"  onclick="return validateForm()">Send</button>
+      <span id="submit-error"></span></br>
       
     </div>
     </form>
@@ -169,6 +170,7 @@
                 "Tuesday",
                 "Wednesday",
                 "Thursday",
+                "Friday",
                 "Saturday",
             ],
             month = [
@@ -197,6 +199,69 @@
 
        
         //   clock end
+        
+       let error_name=document.getElementById("name-error");
+        let error_email=document.getElementById("email-error");
+        
+        let error_message=document.getElementById("message-error");
+        let error_submit=document.getElementById("submit-error");
+
+        function nameValidation(){
+            let name=document.getElementById("username").value;
+            if(name.length==0){
+            error_name.innerHTML = "** Plz fill this field";
+            return false;
+            }
+            if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+           error_name.innerHTML = "Write Full Name";
+            return false;
+            }
+            error_name.innerHTML='<ion-icon name="checkmark-circle-outline"></ion-icon>';
+            return true;
+        }
+     
+        function emailValidation(){
+            let email=document.getElementById("email").value;
+            if(email.length==0){
+            error_email.innerHTML = "** Plz fill this field";
+            return false;
+            }
+            if(!email.match(/^([_\-\.0-9A-Za-z]+)@([_\-\.0-9A-Za-z]+)\.([a-z]){2,4}$/)){
+            error_email.innerHTML = "Email Invalid ";
+            return false;
+            }
+            error_email.innerHTML='<ion-icon name="checkmark-circle-outline"class="green"></ion-icon>';
+            return true;
+        }
+
+
+        function messageValidation(){
+            let message=document.getElementById("message").value;
+            let required= 30;
+            let left=required-message.length;
+            
+            if(left>0){
+            error_message.innerHTML = left +"More Characters Required";
+            return false;
+            }
+            if(message.length>=31){
+            error_message.innerHTML = "Only 30 Characters Required";
+            
+            return false;
+            }
+            
+            error_message.innerHTML='<ion-icon name="checkmark-circle-outline"></ion-icon>';
+            return true;
+        }
+      
+        function validateForm(){
+            if(!nameValidation() || !emailValidation() || !phoneValidation() || !messageValidation()){
+                error_submit.style.display='block';
+                error_submit.innerHTML=" Please Fix Error to Submit";
+                setTimeout(function(){error_submit.style.display='none';}, 3000);
+                return false;
+            }
+        }
   </script>
   
 
