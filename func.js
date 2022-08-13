@@ -6,11 +6,25 @@ let pop = document.getElementsByClassName('main-pop')[0];
 let error = document.getElementsByClassName('error')[0];
 let username;
 
-// if(username != undefined){
-//     pop.style.display = "none";
-// }else if(username == undefined){
-//     pop.style.display = "flex";
-// }
+let xhr = new XMLHttpRequest();
+
+xhr.onload = function() {
+    if(this.status === 200){
+        try{
+            let res = JSON.parse(this.responseText)[0];
+            res.sect = "teacher";
+            console.log(res.sect)
+        }catch (e){
+            console.warn('there was an error');
+        }
+    }else{
+        console.warn('there was an error')
+    }
+}
+
+xhr.open('get', 'accounts.json');
+xhr.send();
+
 
 function start(val){
     for(let p of radio){
